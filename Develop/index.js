@@ -103,9 +103,3 @@ const init = () => {
 };
 
 init();
-
-// {
-//     type: 'list',
-//     name: 'license',
-//     message: '',
-// }

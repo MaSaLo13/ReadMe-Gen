@@ -20,30 +20,31 @@ const fs = require('fs');
 
 
 
-const generateMarkdown = ({ title, description, tableOfContents, installation, usage, contributing, tests, questions, githubName,  }) =>
+const generateMarkdown2 = ({ title, description, installation, usage, contributing, tests, githubName, email, license  }) =>
   `# ${title}
 
-  ## ${description} 
-      - By clicking on the Generate Password button a series of prompts will be asked
-          - How many characters would you like your password to be? Password must be between 8 - 128 characters.
-          - Would you like some lowercase characters?
-          - Uppercase letters?
-          - Numbers?
-          - Special characters?
-      - After answering each prompt, a password will be displayed in #password
+  ## Table of Contents 
+    - Description
+    - Installation
+    - Usage 
+    - Contributing
+    - Tests
+    - Questions
+  ## Description 
+      - ${description}
   ## Installation
+  - ${installation}
   ## Usage
+    - ${usage}
   ## Contributing
-  ## Tests 
+    - ${contributing}
+  ## Tests
+    - ${tests} 
+  ##  
 
-  ## Screenshot of Password Generator
-  ![Screenshot of the Password Generator](./Assets/image/03-javascript-homework-demo.png)
-  
-  repolink: 
-  https://github.com/MaSaLo13/PasswordGenerator
-  
-  deployed site:
-  https://masalo13.github.io/PasswordGenerator/`;
+  ## Questions
+    - Github username: ${githubName}
+    - Email: ${email}`;
 
 // Bonus using writeFileSync as a promise
 const init = () => {
@@ -56,31 +57,47 @@ const init = () => {
         {
           type: 'input',
           name: 'description',
-          message: 'What is the description?',
+          message: 'Write a description?',
         },
         {
           type: 'input',
-          name: 'hobby',
-          message: 'What is your favorite hobby?',
+          name: 'installation',
+          message: 'Installation?',
         },
         {
           type: 'input',
-          name: 'food',
-          message: 'What is your favorite food?',
+          name: 'Usage',
+          message: 'Usage?',
         },
         {
           type: 'input',
-          name: 'github',
-          message: 'Enter your GitHub Username',
+          name: 'contributing',
+          message: 'Contributing?',
         },
         {
           type: 'input',
-          name: 'linkedin',
-          message: 'Enter your LinkedIn URL.',
+          name: 'tests',
+          message: 'Tests?',
         },
+        {
+            type: 'input',
+            name: 'githubName',
+            message: 'github username?',
+          },
+          {
+            type: 'input',
+            name: 'email',
+            message: 'email?',
+          },
+          {
+            type: 'list',
+            message: 'Choose what type of license you want to use',
+            name: 'License',
+            choices: ['IBM', 'MIT', 'Mozilla'],
+          },
       ])
     // Use writeFileSync method to use promises instead of a callback function
-    .then((answers) => fs.writeFileSync('README.md', generateMarkdown(answers)))
+    .then((answers) => fs.writeFileSync('README.md', generateMarkdown2(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };

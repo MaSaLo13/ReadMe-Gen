@@ -1,14 +1,16 @@
 {
-  "name": "static-site",
+  "name": "develop",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Table of Contents      - Description     - Installation     - Usage      - Contributing     - Tests     - Questions   ## Description        - Created a Markdown generator   ## Installation   - asdf   ## Usage     - undefined   ## Contributing     - df   ## Tests     - asdf    ##",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.5.2"
+    "inquirer": "^6.5.2",
+    "node-modules": "^1.0.1"
   }
 }

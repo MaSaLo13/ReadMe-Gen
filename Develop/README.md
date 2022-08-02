@@ -1,4 +1,4 @@
-# Markdown
+# New README
 
   ## Table of Contents 
     - Description
@@ -8,17 +8,17 @@
     - Tests
     - Questions
   ## Description 
-      - Created a Markdown generator
+      - I am trying to figure out if this works as it should
   ## Installation
-  - asdf
+  - Open vs code, then with index.js in develop folder open in terminal
   ## Usage
     - undefined
   ## Contributing
-    - df
+    - Just me
   ## Tests
-    - asdf 
+    - nonde 
   ##  
 
   ## Questions
-    - Github username: MaSaLo13
-    - Email: 123@gmail.com
+    - Github username: Masalo
+    - Email: em2@gmc.com

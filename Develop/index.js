@@ -1,35 +1,19 @@
-// // TODO: Include packages needed for this application
-
-
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 // Use writeFileSync method to use promises instead of a callback function
 
 
-
-const generateMarkdown2 = ({ title, description, installation, usage, contributing, tests, githubName, email, license  }) =>
+const generateMarkdown2 = ({ title, description, installation, usage, contributing, tests, githubName, email, License }) =>
   `# ${title}
 
   ## Table of Contents 
-    - Description
-    - Installation
-    - Usage 
-    - Contributing
-    - Tests
-    - Questions
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
   ## Description 
       - ${description}
   ## Installation
@@ -40,11 +24,11 @@ const generateMarkdown2 = ({ title, description, installation, usage, contributi
     - ${contributing}
   ## Tests
     - ${tests} 
-  ##  
-
   ## Questions
-    - Github username: ${githubName}
-    - Email: ${email}`;
+    [GitHub](https://github.com/${githubName})
+    - Email: ${email}
+
+  ${License}`;
 
 // Bonus using writeFileSync as a promise
 const init = () => {
@@ -93,10 +77,14 @@ const init = () => {
             type: 'list',
             message: 'Choose what type of license you want to use',
             name: 'License',
-            choices: ['IBM', 'MIT', 'Mozilla'],
+            choices: ['[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+             '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)', 
+            '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'],
           },
       ])
     // Use writeFileSync method to use promises instead of a callback function
+
+    
     .then((answers) => fs.writeFileSync('README.md', generateMarkdown2(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));

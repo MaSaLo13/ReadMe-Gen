@@ -53,7 +53,7 @@ const init = () => {
         },
         {
           type: 'input',
-          name: 'Usage',
+          name: 'usage',
           message: 'Usage?',
         },
         {

@@ -25,8 +25,11 @@ const generateMarkdown2 = ({ title, description, installation, usage, contributi
   ## Tests
     - ${tests} 
   ## Questions
+  The following link will take you to my GitHub Profile 
   [${githubName}](https://github.com/${githubName})
-    - Email: ${email}
+  
+  If you have any questions feel free to contact me through my email 
+  ${email}
 
   ${License}`;
 

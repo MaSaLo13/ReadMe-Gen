@@ -16,6 +16,6 @@
 
 ## Links
 - Github Repository: https://github.com/MaSaLo13/ReadMe-Gen
-- Walkthrough: https://drive.google.com/file/d/1Wdk5vax1JN_4GSWnsE-In22cW5t1Wl1l/view
+- Walkthrough: https://drive.google.com/file/d/1IyvZgvq4_2nMatbbLMTh2WhB82XPQzgw/view
 
 

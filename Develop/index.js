@@ -25,7 +25,7 @@ const generateMarkdown2 = ({ title, description, installation, usage, contributi
   ## Tests
     - ${tests} 
   ## Questions
-    [GitHub](https://github.com/${githubName})
+  [${githubName}](https://github.com/${githubName})
     - Email: ${email}
 
   ${License}`;
